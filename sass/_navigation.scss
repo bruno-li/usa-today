@@ -10,15 +10,13 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        height: 90px;
+        height: 75px;
         border-bottom: 1px solid #ddd;
         background-color: #fff;
         .navbar__logo-wrapper{
             display: flex;
             align-items: center;
             list-style: none;
-            margin-left: 3rem;
-            // MEDIA QUERIES
             &__menu{
                width: 300px;
             }
