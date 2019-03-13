@@ -13,30 +13,53 @@
         height: 75px;
         border-bottom: 1px solid #ddd;
         background-color: #fff;
+         //    MEDIA QUERIES
+         @include respond(phone){
+            justify-content: space-between;
+            height: 60px;
+           }
+           @include respond(small-phone){
+            justify-content: center;
+            height: 75px;
+           }
+
         .navbar__logo-wrapper{
             display: flex;
             align-items: center;
             list-style: none;
             &__menu{
                width: 300px;
+            //    MEDIA QUERIES
+               @include respond(phone){
+                width: 220px;
+                margin-left: 1rem;
+               }
             }
         }
         // TOP CONTAINER LINK
         .navbar__right-wrapper{
             list-style: none;
             margin-right: 3rem;
-                // MEDIA QUERIES
-               @include respond(phone){
-                display: none;
-            }
             &__list{
                 display: flex;
                 margin-top: 1rem;
+                   // MEDIA QUERIES
+                   @include respond(phone){
+                    margin-top: .6rem;
+
+                    @include respond(small-phone){
+                        display: none;
+                     }  
+                }
                 span{
                     display: block;
                     font-size: 12px;
                     font-weight: 400;
                     color: #000;
+                      // MEDIA QUERIES
+                      @include respond(phone){
+                         font-size: 10px;
+                      }
                 }
                 &__link{
                     font-size: 16px;
@@ -46,6 +69,11 @@
                     text-transform: uppercase;
                     margin: 0 10px;
                     color: #00a0f8;
+
+                    // MEDIA QUERIES
+                    @include respond(phone){
+                        font-size: 14px;
+                    }
                 }
             }
          
@@ -53,14 +81,36 @@
     }
     // MIDDLE CONTAINER
     &__middle-wrapper{
+
         display: flex;
         justify-content: center;
         align-items: center;
         list-style: none;
+        height: 50px;
         padding: 7px 0;
         background-color: #fff;
         border-bottom: 1px solid #D7D7D9;
+         // MEDIA QUERIES
+          @include respond(tab-port){
+            height: 40px;
+          }    
+          @include respond(phone){
+                height: 33px;
+            }     
+            @include respond(small-phone){
+               display: none;
+            }  
+
         &__list{
+            // MEDIA QUERIES
+            @include respond(phone){
+                &:nth-child(10) {
+                    display: none;
+                  }
+                  &:nth-child(11) {
+                    display: none;
+                  }
+            }
             &__link{
                 font-size: 13px;
                 font-weight: 900;
@@ -68,32 +118,62 @@
                 text-decoration: none;
                 margin: 0 .5rem;
                 color: #000;
-
+                // MEDIA QUERIES
+                @include respond(tab-port){
+                    font-size: 10px;
+                    margin: 0 .3rem;
+                }
                 &--active{
                     font-size: 14px;
                     color: #fff;
                     padding: 18px 15px 16px 15px;
                     background-color: #00a0f8;
+
+                     // MEDIA QUERIES
+                @include respond(tab-port){
+                    font-size: 13px;
+                    padding: 14px 15px 11px 15px;
+                    }
+                @include respond(phone){
+                    font-size: 13px;
+                    padding: 11px 12px 6px 12px;
+                    }
                 }
                 &--sign{
                     font-size: 16px;
                     text-transform: initial;
+                // MEDIA QUERIES
+                @include respond(tab-port){
+                    font-size: 12px;
+                    }
                 }
             }
           &__chevron{
               width: 12px;
               margin-left: .5rem;
+                 // MEDIA QUERIES
+                 @include respond(phone){
+                    width: 9px;
+                    margin-left: .1rem;
+                }
           }
           &__weather{
               margin-top: 2px;
               width: 60px;
+               // MEDIA QUERIES
+              @include respond(tab-port){
+                width: 50px;
+              }
           }
           &__search{
               margin-top: 8px;
               margin-right: 12px;
               width: 21px;
+            // MEDIA QUERIES
+          @include respond(tab-port){
+             width: 18px;
           }
-   
+        }
         }
     }
 }
