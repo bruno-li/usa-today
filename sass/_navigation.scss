@@ -1,0 +1,101 @@
+.navbar{
+    font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    // TOP CONTAINER
+    &__top-wrapper{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 90px;
+        border-bottom: 1px solid #ddd;
+        background-color: #fff;
+        .navbar__logo-wrapper{
+            display: flex;
+            align-items: center;
+            list-style: none;
+            margin-left: 3rem;
+            // MEDIA QUERIES
+            &__menu{
+               width: 300px;
+            }
+        }
+        // TOP CONTAINER LINK
+        .navbar__right-wrapper{
+            list-style: none;
+            margin-right: 3rem;
+                // MEDIA QUERIES
+               @include respond(phone){
+                display: none;
+            }
+            &__list{
+                display: flex;
+                margin-top: 1rem;
+                span{
+                    display: block;
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: #000;
+                }
+                &__link{
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 18px;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    margin: 0 10px;
+                    color: #00a0f8;
+                }
+            }
+         
+        }
+    }
+    // MIDDLE CONTAINER
+    &__middle-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding: 7px 0;
+        background-color: #fff;
+        border-bottom: 1px solid #D7D7D9;
+        &__list{
+            &__link{
+                font-size: 13px;
+                font-weight: 900;
+                text-transform: uppercase;
+                text-decoration: none;
+                margin: 0 .5rem;
+                color: #000;
+
+                &--active{
+                    font-size: 14px;
+                    color: #fff;
+                    padding: 18px 15px 16px 15px;
+                    background-color: #00a0f8;
+                }
+                &--sign{
+                    font-size: 16px;
+                    text-transform: initial;
+                }
+            }
+          &__chevron{
+              width: 12px;
+              margin-left: .5rem;
+          }
+          &__weather{
+              margin-top: 2px;
+              width: 60px;
+          }
+          &__search{
+              margin-top: 8px;
+              margin-right: 12px;
+              width: 21px;
+          }
+   
+        }
+    }
+}

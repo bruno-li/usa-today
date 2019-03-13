@@ -1,0 +1,178 @@
+.footer{
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-align: center;
+    list-style: none;
+    color: #fff;
+    background-color:#091528; 
+
+    &__wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0 auto;
+        width: 80%;
+    }
+    &__figure{
+        display: flex;
+        flex: 0 0 100%;
+        justify-content: center;
+        padding: 1rem 0;
+        &__logo{
+            width: 220px;
+            height: 100%;
+        }
+    }
+    // FIRST COLUMN
+    &__first__list{
+        list-style: inherit;
+        // MEDIA QUERIES
+        @include respond(phone){
+            margin-right: 2rem;
+        }
+            @include respond(small-phone){
+                flex: 0 0 50%;
+                margin: 0 0 1rem 0;
+            }
+        &__items{
+            margin-top: 5px;
+            &:first-child{
+                font-size: 13px;
+                margin-bottom: 15px;
+            }
+        }
+        
+    }
+
+    // SECOND COLUMN
+    &__second__list{
+        list-style: inherit;
+           // MEDIA QUERIES
+           @include respond(phone){
+            margin-right: 2rem;
+        }
+        @include respond(small-phone){
+            flex: 0 0 50%;
+            margin: 0 0 1rem 0;
+        }
+        &__items{
+            margin-top: 5px;
+            &:first-child{
+                font-size: 13px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+    // THIRD COLUMN
+    &__third__list{
+        list-style: inherit;
+   // MEDIA QUERIES
+   @include respond(phone){
+    margin-right: 2rem;
+    }
+    @include respond(small-phone){
+    flex: 0 0 50%;
+    margin: 0 0 1rem 0;
+    }
+    &__items{
+            margin-top: 5px;
+            &:first-child{
+             font-size: 13px;
+             margin-bottom: 15px;
+            }
+        }
+    }
+    // FOURTH COLUMN
+    &__fourth__list{
+        list-style: inherit;
+        @include respond(small-phone){
+            flex: 0 0 50%;
+            margin: 0 0 1rem 0;
+        }
+        &__items{
+            margin-top: 5px;
+        }
+    }
+    // FIFHT COLUMN
+    &__fifth__list{
+        list-style: inherit;
+           // MEDIA QUERIES
+           @include respond(phone){
+            margin-left: 2rem;
+        }
+        @include respond(small-phone){
+            flex: 0 0 50%;
+            margin: 0 0 1rem 0;
+        }
+        &__items{
+            margin-top: 5px;
+            &:first-child{
+                font-size: 13px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+    // SIXTH COLUMN
+    &__sixth__list{
+        list-style: inherit;
+        @include respond(small-phone){
+            flex: 0 0 50%;
+            margin: 0 0 1rem 0;
+
+        }
+        &__items{
+            margin-top: 5px;
+            &:first-child{
+                font-size: 13px;
+                margin-bottom: 15px;
+            }
+
+        }
+    }
+    // SEVENTH COLUMN
+    &__seventh__list{
+        list-style: inherit;
+        @include respond(small-phone){
+            flex: 0 0 50%;
+            margin: 0 0 1rem 0;
+        }
+        &__items{
+            margin-top: 5px;
+            &:first-child{
+                font-size: 13px;
+                margin-bottom: 15px;
+            }
+            
+        }
+    }
+    // EIGHTH COLUMN
+    &__eighth__list{
+        list-style: inherit;
+        @include respond(small-phone){
+            flex: 0 0 50%;
+            margin-right: 0;
+        }
+        &__items{
+            margin-top: 5px;
+            &:first-child{
+                font-size: 13px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+    // COPYRIGHT CONTAINER
+    &__legal-wrapper{
+        flex: 0 0 100%;
+        font-weight: 300;
+        text-align: center;
+        margin: 2rem;
+        padding-top: 1rem;
+        list-style: inherit;
+        border-top: 1px solid #686C73;
+        &__text{
+            margin-top: 5px;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+///// SET UP ///////////////////
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    /* inherited the box-sizing property in the body selector to apply in the entire document */
+    box-sizing: inherit;
+}
+
+body {
+    /* let us customize the box size model with specific unit without the default values */
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+
+
+// MEDIA QUERIES MANAGER
+@mixin respond ($breakpoint) {
+    /* Extra Small Devices, Phones */ 
+	@if $breakpoint==small-phone {
+		@media (max-width: 512px) { 
+			@content; 
+		} 
+	}
+    /* Small Devices, Tablets */
+	@if $breakpoint==phone {
+		@media (max-width: 768px) { 
+			@content; 
+		} 
+	}
+    /* Medium Devices */
+	@if $breakpoint==tab-port {
+		@media (max-width: 1024px) { 
+			@content; 
+		} 
+	}
+    /* Large Devices, Wide Screens */
+	@if $breakpoint==desktop {
+		@media (max-width: 1200px) { 
+			@content;
+		} 
+	}
+}
