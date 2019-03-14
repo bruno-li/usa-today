@@ -44,7 +44,6 @@ body{
       &__social-media{
         margin-top: 1rem;
         width: 330px;
-        width: 100%;
       }
       &__caption{
         font-size: 12px;
@@ -77,13 +76,18 @@ body{
       &__img{
         margin-top: 1rem;
         width: 700px;
-        width: 100%;
-
+            // MEDIA QUERIES
+            @include respond(small-phone){
+              width: 100%;
+           }
       }
       &__img-data{
         margin-top: 1rem;
         width: 700px;
-        width: 100%;
+        // MEDIA QUERIES
+        @include respond(small-phone){
+           width: 100%;
+        }
 
       }
     }
